@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Enkripsi Helia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <span class="emoji">🔍</span>
+      <h1>Pesan Terenkripsi: Level 1</h1>
+      <p class="gombal-text">
+        **Kode Verifikasi:** Dunia ini penuh kejutan.
+        <br />
+        Tapi yang paling menarik adalah Kejutan dari lo.
+      </p>
+
+      <a href="#" id="gombalButton" onclick="changeGombal(); return false;">
+        Lanjutkan Dekripsi [ACCESS]
+      </a>
+
+      <p class="wa-hint">
+        Untuk melanjutkan: Temukan **Kunci 12 Digit** yang terkunci.
+        <br />
+        <span class="wa-number">0812-1018-6709</span>
+      </p>
+
+      <div class="links-section">
+        <a
+          href="https://lifestyle.kompas.com/read/2013/08/03/1633530/7.Cara.Menjadi.Pasangan.yang.Sempurna"
+          target="_blank"
+          class="link-item"
+        >
+          Memahami Konsep Dasar
+        </a>
+        |
+        <a
+          href="https://wa.me/6281210186709"
+          target="_blank"
+          class="link-item wa-link"
+        >
+          Input Kunci (Aksi Cepat)
+        </a>
+        |
+        <a href="#about" class="link-item">
+          Status Sistem [ONLINE]
+        </a>
+      </div>
+
+      <span class="emoji bottom-right">⬜⬛</span>
+    </div>
+
+    <script>
+      const gombalan = [
+        "Data menunjukkan: lu itu variabel yang paling tidak terduga dalam sistem ini",
+        "Proses Analisis: Komunikasi itu adalah transfer data. gua tertarik sama data lo",
+        "Peringatan: Level fokus gua lumayan naik drastis setiap kali notif lu muncul di layar",
+        "Hipotesis: gua sedikit butuh validasi kalo pemikiran lu sekeren yang  gua bayangin",
+        "Status: gua lagi memproses data penting. Yaitu, jadwal lo buat kita ngobrol",
+        "Kesimpulan: Sejauh ini, lu adalah anomali paling menarik yang pernah gua temuin wkwkw",
+        "Proses Pencarian: Balon bentuk monyet sedang dalam proses pencarian"
+      ];
+
+      let lastIndex = -1;
+
+      function changeGombal() {
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * gombalan.length);
+        } while (newIndex === lastIndex);
+
+        lastIndex = newIndex;
+        document.querySelector(".gombal-text").innerHTML = gombalan[newIndex];
+
+        const container = document.querySelector(".container");
+        container.classList.add("pulse-cool"); // Animasi baru
+        setTimeout(() => {
+          container.classList.remove("pulse-cool");
+        }, 600);
+      }
+    </script>
+  </body>
+</html>
